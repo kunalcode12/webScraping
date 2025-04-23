@@ -21,11 +21,11 @@ async function main() {
 
     const content = await page.content();
     const $ = await cheerio.load(content);
-    console.log(
-      $(
-        "body > article > section > div.account-homepage.account-homepage-saved-searches"
-      ).text()
-    );
+    // console.log(
+    //   $(
+    //     "body > article > section > div.account-homepage.account-homepage-saved-searches"
+    //   ).text()
+    // );
   } catch (e) {
     console.error(e);
   }
