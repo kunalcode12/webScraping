@@ -19,7 +19,6 @@ async function main() {
     const scrappedRow = { company, contact, country };
     scrapedRows.push(scrappedRow);
   });
-  console.log(scrapedRows);
 }
 
 main();

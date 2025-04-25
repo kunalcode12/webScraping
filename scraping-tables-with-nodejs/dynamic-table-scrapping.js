@@ -1,31 +1,31 @@
-// const request = require("request-promise");
-// const fs = require("fs");
-// const cheerio = require("cheerio");
+const request = require("request-promise");
+const fs = require("fs");
+const cheerio = require("cheerio");
 
-// async function main() {
-//   const result = await request.get(
-//     "https://www.codingwithstefan.com/table-example/"
-//   );
-//   const $ = cheerio.load(result);
+async function main() {
+  const result = await request.get(
+    "https://www.codingwithstefan.com/table-example/"
+  );
+  const $ = cheerio.load(result);
 
-//   const scrapedRows = [];
-//   const tableHeaders = [];
-//   $("body > table > tbody > tr").each((index, element) => {
-//     if (index === 0) {
-//       const ths = $(element).find("th");
-//       ths.each((index, element) => {
-//         tableHeaders.push($(element).text().toLowerCase());
-//       });
-//       return true;
-//     }
-//     const tds = $(element).find("td");
-//     const tableRow = {};
-//     tds.each((index, element) => {
-//       tableRow[tableHeaders[index]] = $(element).text();
-//     });
-//     scrapedRows.push(tableRow);
-//   });
-//   console.log(scrapedRows);
-// }
+  const scrapedRows = [];
+  const tableHeaders = [];
+  $("body > table > tbody > tr").each((index, element) => {
+    if (index === 0) {
+      const ths = $(element).find("th");
+      ths.each((index, element) => {
+        tableHeaders.push($(element).text().toLowerCase());
+      });
+      return true;
+    }
+    const tds = $(element).find("td");
+    const tableRow = {};
+    tds.each((index, element) => {
+      tableRow[tableHeaders[index]] = $(element).text();
+    });
+    scrapedRows.push(tableRow);
+  });
+  console.log(scrapedRows);
+}
 
-// main();
+main();
