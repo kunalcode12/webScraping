@@ -1,0 +1,282 @@
+const puppeteer = require("puppeteer");
+const fs = require("fs");
+
+/**
+ * Twitter Data Scraper
+ * This script logs into Twitter and scrapes post data from specified accounts
+ */
+async function main() {
+  try {
+    // Launch browser with visible UI and reasonable window size
+    const browser = await puppeteer.launch({
+      headless: false,
+      defaultViewport: null,
+      args: ["--window-size=1366,768"],
+    });
+
+    const page = await browser.newPage();
+
+    // Go to Twitter login page
+    console.log("Navigating to Twitter login page...");
+    await page.goto("https://x.com/i/flow/login", {
+      waitUntil: "networkidle2",
+    });
+    // await page.waitForTimeout(3000); // Wait for page to fully load
+
+    // Enter username
+    console.log("Entering username...");
+    await page.waitForSelector('input[autocomplete="username"]');
+    await page.type('input[autocomplete="username"]', "k84489567@gmail.com", {
+      delay: 200,
+    });
+
+    // Click next button
+    // await page.waitForSelector('div[role="button"]:nth-of-type(6)');
+
+    // await page.waitForSelector('div[role="button"][tabindex="0"] div[dir="ltr"]');
+
+    // Find all buttons and click the one containing "Next"
+    const nextButtons = await page.$$('button[role="button"]');
+    let nextButtonFound = false;
+
+    for (const button of nextButtons) {
+      const buttonText = await page.evaluate((el) => el.textContent, button);
+      if (buttonText && buttonText.includes("Next")) {
+        await button.click();
+        nextButtonFound = true;
+        console.log("Next button clicked");
+        break;
+      }
+    }
+    //   await page.waitForTimeout(2000);
+    // await page.waitForNavigation({ waitUntil: "networkidle2" });
+
+    console.log("Entering username2...");
+    await page.waitForSelector('input[autocomplete="on"]');
+    await page.type('input[autocomplete="on"]', "kash121131314", {
+      delay: 200,
+    });
+
+    const nextButtons2 = await page.$$('button[role="button"]');
+    // let nextButtonFound = false;
+
+    for (const button of nextButtons2) {
+      const buttonText = await page.evaluate((el) => el.textContent, button);
+      if (buttonText && buttonText.includes("Next")) {
+        await button.click();
+        nextButtonFound = true;
+        console.log("Next button clicked");
+        break;
+      }
+    }
+
+    // Enter password
+    console.log("Entering password...");
+    await page.waitForSelector('input[name="password"]');
+    await page.type('input[name="password"]', "8920560393", { delay: 200 });
+
+    // Click login button
+    // await page.waitForSelector('div[data-testid="LoginForm_Login_Button"]');
+    // await Promise.all([
+    //   page.waitForNavigation({ waitUntil: "networkidle2" }),
+    //   page.click('div[data-testid="LoginForm_Login_Button"]'),
+    // ]);
+
+    const nextButtons1 = await page.$$('button[role="button"]');
+
+    for (const button of nextButtons1) {
+      const buttonText = await page.evaluate((el) => el.textContent, button);
+      if (buttonText && buttonText.includes("Next")) {
+        await button.click();
+        nextButtonFound = true;
+        console.log("Next button clicked");
+        break;
+      }
+    }
+
+    // Wait for login to complete
+    console.log("Logging in...");
+    // await page.waitForTimeout(5000);
+
+    // Array of accounts to scrape
+    const accountsToScrape = [
+      "realDonaldTrump",
+      // Add more accounts as needed
+    ];
+
+    const allPostsData = [];
+
+    // Process each account
+    for (const account of accountsToScrape) {
+      console.log(`Navigating to ${account}'s profile...`);
+      await page.goto(`https://x.com/${account}`, {
+        waitUntil: "networkidle2",
+      });
+      //   await page.waitForTimeout(5000);
+
+      // Get account details
+      const accountData = await extractAccountDetails(page);
+      console.log(`Scraping posts for ${account}...`);
+
+      // Scroll to load more posts (adjust the number as needed)
+      const scrollCount = 5;
+      for (let i = 0; i < scrollCount; i++) {
+        await page.evaluate(() => window.scrollBy(0, window.innerHeight));
+        // await page.waitForTimeout(2000); // Wait for posts to load
+      }
+
+      // Extract post data
+      const posts = await extractPostsData(page, account);
+      allPostsData.push({
+        account: account,
+        accountDetails: accountData,
+        posts: posts,
+      });
+
+      console.log(`Scraped ${posts.length} posts from ${account}`);
+    }
+
+    // Save data to JSON file
+    fs.writeFileSync(
+      "twitter_data.json",
+      JSON.stringify(allPostsData, null, 2)
+    );
+    console.log("All data fetched successfully and saved to twitter_data.json");
+
+    // Keep browser open for manual review (optional)
+    // await browser.close();
+  } catch (error) {
+    console.error("Error during scraping:", error);
+  }
+}
+
+/**
+ * Extract account details
+ */
+async function extractAccountDetails(page) {
+  try {
+    // Extract follower count, following count, etc.
+    const accountDetails = await page.evaluate(() => {
+      const headerElement = document.querySelector(
+        'div[data-testid="UserProfileHeader_Items"]'
+      );
+      const bioElement = document.querySelector(
+        'div[data-testid="UserDescription"]'
+      );
+
+      return {
+        bio: bioElement ? bioElement.textContent : "",
+        headerInfo: headerElement ? headerElement.textContent : "",
+        // You can add more specific account details as needed
+      };
+    });
+
+    return accountDetails;
+  } catch (error) {
+    console.error("Error extracting account details:", error);
+    return {};
+  }
+}
+
+/**
+ * Extract data from all posts on the page
+ */
+async function extractPostsData(page, accountName) {
+  try {
+    const postsData = await page.evaluate(() => {
+      const posts = [];
+      const articleElements = document.querySelectorAll(
+        'article[data-testid="tweet"]'
+      );
+
+      articleElements.forEach((article) => {
+        try {
+          // Extract timestamp
+          const timeElement = article.querySelector("time");
+          const timestamp = timeElement
+            ? timeElement.getAttribute("datetime")
+            : null;
+          const displayTime = timeElement ? timeElement.textContent : null;
+
+          // Extract post URL
+          const linkElement = article.querySelector('a[href*="/status/"]');
+          const postUrl = linkElement ? linkElement.getAttribute("href") : null;
+
+          // Extract engagement stats
+          const statsDiv =
+            article.querySelector('div[aria-label*="replies"]') ||
+            article.querySelector('div[aria-label*="likes"]') ||
+            article.querySelector('div[role="group"]');
+
+          let statsText = statsDiv ? statsDiv.getAttribute("aria-label") : "";
+
+          // Parse stats
+          let replies = 0,
+            reposts = 0,
+            likes = 0,
+            bookmarks = 0,
+            views = 0;
+
+          if (statsText) {
+            // Extract numbers using regex
+            const repliesMatch = statsText.match(/(\d+,?\d*)\s+repl/);
+            const repostsMatch = statsText.match(/(\d+,?\d*)\s+repost/);
+            const likesMatch = statsText.match(/(\d+,?\d*)\s+like/);
+            const bookmarksMatch = statsText.match(/(\d+,?\d*)\s+bookmark/);
+            const viewsMatch = statsText.match(/(\d+,?\d*)\s+view/);
+
+            replies = repliesMatch ? repliesMatch[1].replace(",", "") : 0;
+            reposts = repostsMatch ? repostsMatch[1].replace(",", "") : 0;
+            likes = likesMatch ? likesMatch[1].replace(",", "") : 0;
+            bookmarks = bookmarksMatch ? bookmarksMatch[1].replace(",", "") : 0;
+            views = viewsMatch ? viewsMatch[1].replace(",", "") : 0;
+          }
+
+          // Extract post content
+          const tweetTextElement = article.querySelector(
+            'div[data-testid="tweetText"]'
+          );
+          const tweetText = tweetTextElement
+            ? tweetTextElement.textContent
+            : "";
+
+          posts.push({
+            timestamp,
+            displayTime,
+            postUrl,
+            tweetText,
+            engagement: {
+              replies: parseInt(replies) || 0,
+              reposts: parseInt(reposts) || 0,
+              likes: parseInt(likes) || 0,
+              bookmarks: parseInt(bookmarks) || 0,
+              views: parseInt(views) || 0,
+            },
+            rawStatsText: statsText,
+          });
+        } catch (err) {
+          console.log("Error processing individual post:", err);
+        }
+      });
+
+      return posts;
+    });
+
+    // Add the account name to each post
+    return postsData.map((post) => {
+      post.accountName = accountName;
+      return post;
+    });
+  } catch (error) {
+    console.error("Error extracting posts data:", error);
+    return [];
+  }
+}
+
+// Add a function to handle rate limiting and avoid being blocked
+async function randomDelay(min = 1000, max = 3000) {
+  const delay = Math.floor(Math.random() * (max - min + 1)) + min;
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
+main();
