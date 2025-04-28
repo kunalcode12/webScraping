@@ -21,7 +21,6 @@ async function main() {
     await page.goto("https://x.com/i/flow/login", {
       waitUntil: "networkidle2",
     });
-    // await page.waitForTimeout(3000); // Wait for page to fully load
 
     // Enter username
     console.log("Entering username...");
@@ -31,11 +30,6 @@ async function main() {
     });
 
     // Click next button
-    // await page.waitForSelector('div[role="button"]:nth-of-type(6)');
-
-    // await page.waitForSelector('div[role="button"][tabindex="0"] div[dir="ltr"]');
-
-    // Find all buttons and click the one containing "Next"
     const nextButtons = await page.$$('button[role="button"]');
     let nextButtonFound = false;
 
@@ -48,8 +42,6 @@ async function main() {
         break;
       }
     }
-    //   await page.waitForTimeout(2000);
-    // await page.waitForNavigation({ waitUntil: "networkidle2" });
 
     console.log("Entering username2...");
     await page.waitForSelector('input[autocomplete="on"]');
@@ -58,7 +50,6 @@ async function main() {
     });
 
     const nextButtons2 = await page.$$('button[role="button"]');
-    // let nextButtonFound = false;
 
     for (const button of nextButtons2) {
       const buttonText = await page.evaluate((el) => el.textContent, button);
@@ -76,27 +67,21 @@ async function main() {
     await page.type('input[name="password"]', "8920560393", { delay: 200 });
 
     // Click login button
-    // await page.waitForSelector('div[data-testid="LoginForm_Login_Button"]');
-    // await Promise.all([
-    //   page.waitForNavigation({ waitUntil: "networkidle2" }),
-    //   page.click('div[data-testid="LoginForm_Login_Button"]'),
-    // ]);
-
     const nextButtons1 = await page.$$('button[role="button"]');
 
     for (const button of nextButtons1) {
       const buttonText = await page.evaluate((el) => el.textContent, button);
-      if (buttonText && buttonText.includes("Next")) {
+      if (buttonText && buttonText.includes("Log in")) {
         await button.click();
         nextButtonFound = true;
-        console.log("Next button clicked");
+        console.log("Log in button clicked");
         break;
       }
     }
 
     // Wait for login to complete
     console.log("Logging in...");
-    // await page.waitForTimeout(5000);
+    await randomDelay();
 
     // Array of accounts to scrape
     const accountsToScrape = [
@@ -107,33 +92,68 @@ async function main() {
     const allPostsData = [];
 
     // Process each account
-    for (const account of accountsToScrape) {
+    for (let i = 0; i < accountsToScrape.length; i++) {
+      const account = accountsToScrape[i];
+
       console.log(`Navigating to ${account}'s profile...`);
       await page.goto(`https://x.com/${account}`, {
         waitUntil: "networkidle2",
       });
-      //   await page.waitForTimeout(5000);
 
       // Get account details
       const accountData = await extractAccountDetails(page);
       console.log(`Scraping posts for ${account}...`);
 
+      // Create a set to track post URLs we've already seen
+      const seenPostUrls = new Set();
+      const allAccountPosts = [];
+
       // Scroll to load more posts (adjust the number as needed)
-      const scrollCount = 5;
+      const scrollCount = 25;
+
       for (let i = 0; i < scrollCount; i++) {
         await page.evaluate(() => window.scrollBy(0, window.innerHeight));
-        // await page.waitForTimeout(2000); // Wait for posts to load
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        // Extract new posts
+        const newPosts = await extractPostsData(page, account);
+
+        // Filter out duplicates and add only new posts
+        const uniqueNewPosts = newPosts.filter((post) => {
+          // If post has no URL, use timestamp as identifier
+          const identifier = post.postUrl || post.timestamp;
+          if (!identifier || seenPostUrls.has(identifier)) {
+            return false;
+          }
+
+          // Add to seen set and return true to keep this post
+          seenPostUrls.add(identifier);
+          return true;
+        });
+
+        // Add unique new posts to our collection
+        allAccountPosts.push(...uniqueNewPosts);
+
+        console.log(
+          `Found ${uniqueNewPosts.length} new posts (total: ${allAccountPosts.length})`
+        );
+
+        if (i % 5 === 0 && i > 0) {
+          console.log("Taking a longer pause to ensure content loads...");
+          await new Promise((resolve) => setTimeout(resolve, 3000)); // Extra wait every 5 scrolls
+        }
       }
 
-      // Extract post data
-      const posts = await extractPostsData(page, account);
+      // Add the account's data to our full collection
       allPostsData.push({
         account: account,
         accountDetails: accountData,
-        posts: posts,
+        posts: allAccountPosts,
       });
 
-      console.log(`Scraped ${posts.length} posts from ${account}`);
+      console.log(
+        `Completed scraping for ${account}. Total posts: ${allAccountPosts.length}`
+      );
     }
 
     // Save data to JSON file
@@ -237,7 +257,7 @@ async function extractPostsData(page, accountName) {
             'div[data-testid="tweetText"]'
           );
           const tweetText = tweetTextElement
-            ? tweetTextElement.textContent
+            ? tweetTextElement.innerText.trim()
             : "";
 
           posts.push({
@@ -274,7 +294,7 @@ async function extractPostsData(page, accountName) {
 }
 
 // Add a function to handle rate limiting and avoid being blocked
-async function randomDelay(min = 1000, max = 3000) {
+async function randomDelay(min = 4000, max = 8000) {
   const delay = Math.floor(Math.random() * (max - min + 1)) + min;
   return new Promise((resolve) => setTimeout(resolve, delay));
 }
