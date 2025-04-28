@@ -86,6 +86,7 @@ async function main() {
     // Array of accounts to scrape
     const accountsToScrape = [
       "realDonaldTrump",
+      "elonmusk",
       // Add more accounts as needed
     ];
 
@@ -104,7 +105,8 @@ async function main() {
       const accountData = await extractAccountDetails(page);
       console.log(`Scraping posts for ${account}...`);
 
-      // Create a set to track post URLs we've already seen
+      // Create a set
+      //  to track post URLs we've already seen
       const seenPostUrls = new Set();
       const allAccountPosts = [];
 
