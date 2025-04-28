@@ -1,5 +1,8 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
+const path = require("path");
+
+const COOKIES_PATH = path.join(__dirname, "twitter_cookies.json");
 
 /**
  * Twitter Data Scraper
@@ -12,81 +15,118 @@ async function main() {
       headless: false,
       defaultViewport: null,
       args: ["--window-size=1366,768"],
+      userDataDir: path.join(__dirname, "chrome_user_data"),
     });
 
     const page = await browser.newPage();
 
-    // Go to Twitter login page
-    console.log("Navigating to Twitter login page...");
-    await page.goto("https://x.com/i/flow/login", {
-      waitUntil: "networkidle2",
-    });
+    let loggedIn = false;
 
-    // Enter username
-    console.log("Entering username...");
-    await page.waitForSelector('input[autocomplete="username"]');
-    await page.type('input[autocomplete="username"]', "k84489567@gmail.com", {
-      delay: 200,
-    });
+    if (fs.existsSync(COOKIES_PATH)) {
+      console.log("Found saved cookies, attempting to use existing session...");
+      const cookiesString = fs.readFileSync(COOKIES_PATH);
+      const cookies = JSON.parse(cookiesString);
+      await page.setCookie(...cookies);
 
-    // Click next button
-    const nextButtons = await page.$$('button[role="button"]');
-    let nextButtonFound = false;
+      // Go to Twitter home to check if we're logged in
+      await page.goto("https://x.com/home", { waitUntil: "networkidle2" });
 
-    for (const button of nextButtons) {
-      const buttonText = await page.evaluate((el) => el.textContent, button);
-      if (buttonText && buttonText.includes("Next")) {
-        await button.click();
-        nextButtonFound = true;
-        console.log("Next button clicked");
-        break;
-      }
+      // Check if we are logged in by looking for elements that only appear when logged in
+      loggedIn = await page.evaluate(() => {
+        // Look for elements that indicate we're logged in
+        return (
+          !!document.querySelector('a[data-testid="AppTabBar_Home_Link"]') ||
+          !!document.querySelector(
+            'a[data-testid="SideNav_NewTweet_Button"]'
+          ) ||
+          !!document.querySelector('div[data-testid="tweetButtonInline"]')
+        );
+      });
+
+      console.log(
+        loggedIn
+          ? "Successfully logged in with saved cookies"
+          : "Cookies expired, need to log in again"
+      );
     }
 
-    console.log("Entering username2...");
-    await page.waitForSelector('input[autocomplete="on"]');
-    await page.type('input[autocomplete="on"]', "kash121131314", {
-      delay: 200,
-    });
+    if (!loggedIn) {
+      // Go to Twitter login page
+      console.log("Navigating to Twitter login page...");
+      await page.goto("https://x.com/i/flow/login", {
+        waitUntil: "networkidle2",
+      });
 
-    const nextButtons2 = await page.$$('button[role="button"]');
+      // Enter username
+      console.log("Entering username...");
+      await page.waitForSelector('input[autocomplete="username"]');
+      await page.type('input[autocomplete="username"]', "k84489567@gmail.com", {
+        delay: 200,
+      });
 
-    for (const button of nextButtons2) {
-      const buttonText = await page.evaluate((el) => el.textContent, button);
-      if (buttonText && buttonText.includes("Next")) {
-        await button.click();
-        nextButtonFound = true;
-        console.log("Next button clicked");
-        break;
+      // Click next button
+      const nextButtons = await page.$$('button[role="button"]');
+      let nextButtonFound = false;
+
+      for (const button of nextButtons) {
+        const buttonText = await page.evaluate((el) => el.textContent, button);
+        if (buttonText && buttonText.includes("Next")) {
+          await button.click();
+          nextButtonFound = true;
+          console.log("Next button clicked");
+          break;
+        }
       }
-    }
 
-    // Enter password
-    console.log("Entering password...");
-    await page.waitForSelector('input[name="password"]');
-    await page.type('input[name="password"]', "8920560393", { delay: 200 });
+      console.log("Entering username2...");
+      await page.waitForSelector('input[autocomplete="on"]');
+      await page.type('input[autocomplete="on"]', "kash121131314", {
+        delay: 200,
+      });
 
-    // Click login button
-    const nextButtons1 = await page.$$('button[role="button"]');
+      const nextButtons2 = await page.$$('button[role="button"]');
 
-    for (const button of nextButtons1) {
-      const buttonText = await page.evaluate((el) => el.textContent, button);
-      if (buttonText && buttonText.includes("Log in")) {
-        await button.click();
-        nextButtonFound = true;
-        console.log("Log in button clicked");
-        break;
+      for (const button of nextButtons2) {
+        const buttonText = await page.evaluate((el) => el.textContent, button);
+        if (buttonText && buttonText.includes("Next")) {
+          await button.click();
+          nextButtonFound = true;
+          console.log("Next button clicked");
+          break;
+        }
       }
-    }
 
-    // Wait for login to complete
-    console.log("Logging in...");
-    await randomDelay();
+      // Enter password
+      console.log("Entering password...");
+      await page.waitForSelector('input[name="password"]');
+      await page.type('input[name="password"]', "8920560393", { delay: 200 });
+
+      // Click login button
+      const nextButtons1 = await page.$$('button[role="button"]');
+
+      for (const button of nextButtons1) {
+        const buttonText = await page.evaluate((el) => el.textContent, button);
+        if (buttonText && buttonText.includes("Log in")) {
+          await button.click();
+          nextButtonFound = true;
+          console.log("Log in button clicked");
+          break;
+        }
+      }
+
+      // Wait for login to complete
+      console.log("Logging in...");
+      await randomDelay();
+
+      const cookies = await page.cookies();
+      fs.writeFileSync(COOKIES_PATH, JSON.stringify(cookies, null, 2));
+      console.log("Cookies saved for future sessions");
+    }
 
     // Array of accounts to scrape
     const accountsToScrape = [
       "realDonaldTrump",
-      "elonmusk",
+      // "elonmusk",
       // Add more accounts as needed
     ];
 
@@ -94,6 +134,7 @@ async function main() {
 
     // Process each account
     for (let i = 0; i < accountsToScrape.length; i++) {
+      await randomDelay();
       const account = accountsToScrape[i];
 
       console.log(`Navigating to ${account}'s profile...`);
