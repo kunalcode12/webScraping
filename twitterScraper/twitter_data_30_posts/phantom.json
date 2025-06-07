@@ -1,0 +1,218 @@
+{
+  "account": "phantom",
+  "scrapingDate": "2025-05-27T16:09:04.621Z",
+  "targetPostCount": 30,
+  "totalPosts": 30,
+  "posts": [
+    {
+      "timestamp": "2025-05-14T17:11:44.000Z",
+      "tweetText": "We’re launching our own LST: Phantom Staked SOL (PSOL) \n\nWhy liquid stake with Phantom?\n\nSimple:\n Earn SOL rewards\n Maintain liquidity\n Support the \n@solana\n network",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1922701374044668078"
+    },
+    {
+      "timestamp": "2025-05-26T16:09:08.000Z",
+      "tweetText": "Monday morning routine: Check out last week’s top tokens on Phantom \n\n1. Launchcoin \n2. Moonpig  \n3. Collat \n4. Fartcoin \n5. ai16z",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1927034275930477038"
+    },
+    {
+      "timestamp": "2025-05-26T16:09:09.000Z",
+      "tweetText": "Track prices and swap Launchcoin and other top tokens directly on our website",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1927034279353086148"
+    },
+    {
+      "timestamp": "2025-05-26T16:09:09.000Z",
+      "tweetText": "Note: These represent the top tokens swapped with our in-wallet swapper between 5/19 and 5/25, excluding SOL and stablecoins. This post is not intended for UK audiences.",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1927034281567646102"
+    },
+    {
+      "timestamp": "2025-05-25T18:43:52.000Z",
+      "tweetText": "Unlock liquidity with Phantom Staked SOL \n\nSwap PSOL anytime to instantly receive your deposited SOL and accrued rewards.\n\nNo lockups. No waiting. No stress.",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1926710826469064746"
+    },
+    {
+      "timestamp": "2025-05-25T18:43:53.000Z",
+      "tweetText": "This post is not intended for UK audiences",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1926710829694533928"
+    },
+    {
+      "timestamp": "2025-05-24T19:22:35.000Z",
+      "tweetText": "is x really down? or are we just not posting any bangers?",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1926358183980765250"
+    },
+    {
+      "timestamp": "2025-05-23T20:38:33.000Z",
+      "tweetText": "$WCT by \n@WalletConnect\n Network is coming to Solana.\n\nPhantom users will be eligible for rewards. More information coming soon!",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1926014910800019949"
+    },
+    {
+      "timestamp": "2025-05-23T19:40:46.000Z",
+      "tweetText": "The \n@SolanaConf\n keynote by \n@bchillman\n is now available on youtube \n\nCheck it out to learn how Phantom plans to accelerate the ecosystem!",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1926000370968367385"
+    },
+    {
+      "timestamp": "2025-05-22T21:45:03.000Z",
+      "tweetText": "Did you catch \n@bchillman\n at \n@SolanaConf\n today? We believe Phantom and \n@Solana\n have the opportunity to become the foundation and home for all consumer finance.\n\nBrandon discussed how we can improve the state of crypto UX, capture that opportunity and accelerate the adoption of",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925669262145859676"
+    },
+    {
+      "timestamp": "2025-05-22T17:22:47.000Z",
+      "tweetText": "FYI: We just reduced the minimum trade for gasless swaps from $75 to $15",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925603258074271955"
+    },
+    {
+      "timestamp": "2025-05-22T17:22:47.000Z",
+      "tweetText": "Gasless swaps activate only when your SOL balance is too low to cover fees.\n\n Auto-slippage must be enabled.\n\n Fees are deducted from the tokens you are swapping.\n\n Only available on mobile.",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925603260280480049"
+    },
+    {
+      "timestamp": "2025-05-22T17:22:48.000Z",
+      "tweetText": "This post is not intended for UK audiences",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925603261471760744"
+    },
+    {
+      "timestamp": "2025-05-22T15:19:54.000Z",
+      "tweetText": "We’ve learned that a Cetus smart contract was hacked this morning for approximately $223M and Cetus subsequently paused their smart contracts to prevent further theft. \n\nCetus worked together with the other DeFi protocols, the Sui Foundation, and the Sui validators to",
+      "isRepost": true,
+      "originalAuthor": "SuiNetwork",
+      "postUrl": "/SuiNetwork/status/1925572334054002774"
+    },
+    {
+      "timestamp": "2025-05-22T12:24:34.000Z",
+      "tweetText": "At 3:52 AM PT, we became aware of an incident concerning Cetus. The Cetus team has our active support in this ongoing investigation and will provide further updates as soon as they become available.",
+      "isRepost": true,
+      "originalAuthor": "SuiNetwork",
+      "postUrl": "/SuiNetwork/status/1925528208868356595"
+    },
+    {
+      "timestamp": "2025-05-22T04:09:23.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925403591474643221"
+    },
+    {
+      "timestamp": "2025-05-21T23:32:49.000Z",
+      "tweetText": "Great day co-working alongside \n@solana\n  devs at \n@variantfund\n \n\nIf you missed Phantom today, you can still say hello tomorrow at the keynote by our co-founder \n@bchillman\n\n\nAccelerating the ecosystem  at 1:25pm ET on Thursday, May 22nd",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925333992305565762"
+    },
+    {
+      "timestamp": "2025-05-21T18:02:39.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925250901994086468"
+    },
+    {
+      "timestamp": "2025-05-21T15:24:02.000Z",
+      "tweetText": "woke up like this. who's ready for \n@SolanaConf\n ?!",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1925210985767600364"
+    },
+    {
+      "timestamp": "2025-05-20T21:58:55.000Z",
+      "tweetText": "ACCELERATE EVERYTHING",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924947973026582587"
+    },
+    {
+      "timestamp": "2025-05-20T18:19:27.000Z",
+      "tweetText": "FYI:\n\nYou can easily import your existing Sui wallets to Phantom \n\nHere’s how:",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924892742544761246"
+    },
+    {
+      "timestamp": "2025-05-19T23:08:58.000Z",
+      "tweetText": "GN everyone\n\n(checks Phantom wallet in bed for 3 hours )",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924603213644497133"
+    },
+    {
+      "timestamp": "2025-05-19T16:48:35.000Z",
+      "tweetText": "Last week’s top tokens are in…\n\n1. Launchcoin \n2. Fartcoin \n3. House \n4. Useless \n5. ai16z",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924507489896485321"
+    },
+    {
+      "timestamp": "2025-05-19T16:48:36.000Z",
+      "tweetText": "Track prices and swap Launchcoin and other top tokens directly on our website",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924507491704177077"
+    },
+    {
+      "timestamp": "2025-05-19T16:48:36.000Z",
+      "tweetText": "Note: These represent the top tokens swapped with our in-wallet swapper between 5/12 and 5/18, excluding SOL and stablecoins. This post is not intended for UK audiences.",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924507492912087433"
+    },
+    {
+      "timestamp": "2025-05-18T18:38:12.000Z",
+      "tweetText": "Just found out there are people in the world who don’t own any crypto yet",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1924172686336700509"
+    },
+    {
+      "timestamp": "2025-05-17T17:54:04.000Z",
+      "tweetText": "solana summer (real)",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1923799192922976398"
+    },
+    {
+      "timestamp": "2025-05-16T22:15:37.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1923502625791803745"
+    },
+    {
+      "timestamp": "2025-05-16T18:38:24.000Z",
+      "tweetText": "You can start exploring the \n@suinetwork\n ecosystem in less than 5 minutes with Phantom.\n\nHere’s how",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1923447960630693963"
+    },
+    {
+      "timestamp": "2025-05-16T18:38:26.000Z",
+      "tweetText": "Once your wallet is funded:\n\n Use Phantom Explore to see trending Sui tokens\n Visit our website to view a curated list of popular Sui apps\n\nLearn more by visiting:",
+      "isRepost": false,
+      "originalAuthor": "phantom",
+      "postUrl": "/phantom/status/1923447969900032027"
+    }
+  ]
+}

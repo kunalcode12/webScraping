@@ -1,0 +1,35 @@
+{
+  "scrapingDate": "2025-05-27T16:45:41.136Z",
+  "targetPostCount": 30,
+  "totalAccounts": 4,
+  "accounts": [
+    {
+      "account": "CryptooIndia",
+      "postsCount": 30,
+      "scrollsCount": 18,
+      "reachedTargetCount": true,
+      "fileName": "CryptooIndia.json"
+    },
+    {
+      "account": "garyvee",
+      "postsCount": 30,
+      "scrollsCount": 27,
+      "reachedTargetCount": true,
+      "fileName": "garyvee.json"
+    },
+    {
+      "account": "realDonaldTrump",
+      "postsCount": 30,
+      "scrollsCount": 17,
+      "reachedTargetCount": true,
+      "fileName": "realDonaldTrump.json"
+    },
+    {
+      "account": "elonmusk",
+      "postsCount": 30,
+      "scrollsCount": 22,
+      "reachedTargetCount": true,
+      "fileName": "elonmusk.json"
+    }
+  ]
+}

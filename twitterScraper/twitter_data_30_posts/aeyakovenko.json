@@ -1,0 +1,218 @@
+{
+  "account": "aeyakovenko",
+  "scrapingDate": "2025-05-27T15:11:25.843Z",
+  "targetPostCount": 30,
+  "totalPosts": 30,
+  "posts": [
+    {
+      "timestamp": "2025-05-19T12:29:38.000Z",
+      "tweetText": "Let's do another pitch session auction on \n@timedotfun\n https://time.fun/auctions/toly/41… (all proceeds go to st judes childrens research)",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1924442321975939284"
+    },
+    {
+      "timestamp": "2025-05-27T08:06:02.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927275086861513169"
+    },
+    {
+      "timestamp": "2025-05-27T08:02:32.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927274206233849945"
+    },
+    {
+      "timestamp": "2025-05-26T09:06:32.000Z",
+      "tweetText": "xBTC from OKX coming to Solana.\nLook for more wrapped crypto native assets to come to Solana",
+      "isRepost": true,
+      "originalAuthor": "calilyliu",
+      "postUrl": "/calilyliu/status/1926927924176748809"
+    },
+    {
+      "timestamp": "2025-05-26T22:12:33.000Z",
+      "tweetText": "The sun is setting on Solana's consensus IBRL-style: vote fees yeeted, latency deleted, haters depleted\n\n\n@__lostin__\n and I cover everything you need to know about Alpenglow, Solana's great consensus rewrite, on the \n@heliuslabs\n blog:",
+      "isRepost": true,
+      "originalAuthor": "0xIchigo",
+      "postUrl": "/0xIchigo/status/1927125733777768757"
+    },
+    {
+      "timestamp": "2025-05-27T02:59:30.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927197946950385938"
+    },
+    {
+      "timestamp": "2025-05-27T02:04:11.000Z",
+      "tweetText": "Nobody wants to talk about  decentralization unless it's criticizing the other chain for not being decentralized enough",
+      "isRepost": true,
+      "originalAuthor": "cfl0ws",
+      "postUrl": "/cfl0ws/status/1927184024621007190"
+    },
+    {
+      "timestamp": "2025-05-27T01:49:41.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927180375937171763"
+    },
+    {
+      "timestamp": "2025-05-27T01:46:15.000Z",
+      "tweetText": "Harvesting deepseek r1 distill 32B for knowledge samples to train other small LLMs how to code programs on Solana. Will update my dataset on hugging face soon. Aiming for 1k - 10k+ samples instead of 360",
+      "isRepost": true,
+      "originalAuthor": "BifrostTitan",
+      "postUrl": "/BifrostTitan/status/1927179513072398673"
+    },
+    {
+      "timestamp": "2025-05-27T01:03:49.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927168831920677263"
+    },
+    {
+      "timestamp": "2025-05-27T01:02:09.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927168412066750699"
+    },
+    {
+      "timestamp": "2025-05-26T23:56:40.000Z",
+      "tweetText": "How are operators feeling about alpenglow? I heard lots of good feedback at accelerate.",
+      "isRepost": true,
+      "originalAuthor": "TimGarcia0",
+      "postUrl": "/TimGarcia0/status/1927151933803860024"
+    },
+    {
+      "timestamp": "2025-05-26T21:27:55.000Z",
+      "tweetText": "I think this is pretty cool.  Two different visions.",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927114500102111315"
+    },
+    {
+      "timestamp": "2025-05-26T12:45:39.000Z",
+      "tweetText": "I think (i) getting to stage 1 and then stage 2, (ii) getting <= 1h native withdrawal times, (iii) having bypass channels for censorship resistance, are all more important for L2s than decentralizing the sequencer.\n\nI've been heartened to see how much progress there has been on",
+      "isRepost": true,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1926983065764569241"
+    },
+    {
+      "timestamp": "2025-05-26T19:31:06.000Z",
+      "tweetText": "prove me wrong:\n\n> wallet activity reveals inferred interests\n> inferences are guesses for preferences\n> preferences help personalize for first-time users\n> personalization = better UX\n\nevery app, crypto or not crypto, is better when users can connect their wallet.",
+      "isRepost": true,
+      "originalAuthor": "0xDesigner",
+      "postUrl": "/0xDesigner/status/1927085103387209993"
+    },
+    {
+      "timestamp": "2025-05-26T14:00:22.000Z",
+      "tweetText": "here's the split between bundled and blind sandwich attacks on evm chains\n\nfrom: http://dune.com/queries/5189372",
+      "isRepost": true,
+      "originalAuthor": "hildobby_",
+      "postUrl": "/hildobby_/status/1927001871916400926"
+    },
+    {
+      "timestamp": "2025-05-26T18:21:16.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927067526074122437"
+    },
+    {
+      "timestamp": "2025-05-26T15:55:58.000Z",
+      "tweetText": "Time is fun.  I think auctions for time are the key to improve signal to noise ratio in comms.",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927030961281126470"
+    },
+    {
+      "timestamp": "2025-05-26T15:52:28.000Z",
+      "tweetText": "Anyone who says that solana has won at anything is a sleeper agent.  It’s 100% psyops.  There is a mountain of work left to do on all fronts.",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927030079680401451"
+    },
+    {
+      "timestamp": "2025-05-26T15:47:02.000Z",
+      "tweetText": "Getting cocky and resting on its laurels. That goes for Solana itself slowing the pace of innovation, getting passed up as the fastest. It also goes for the larger companies dominating activity.",
+      "isRepost": true,
+      "originalAuthor": "redacted_noah",
+      "postUrl": "/redacted_noah/status/1927028712865739067"
+    },
+    {
+      "timestamp": "2025-05-26T15:11:49.000Z",
+      "tweetText": "To all American servicemen and their families, bless you and thank you.",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927019851605786663"
+    },
+    {
+      "timestamp": "2025-05-26T14:26:45.000Z",
+      "tweetText": "Crypto founders should be doing a pre-mortem exercise once a quarter.  If the general markets tank 95%, what do you do?\n1) what product would you be grinding on for those 18 months until things rebound?\n2) what’s the best team to focus on it?\n3) do you have enough cash in short",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1927008508022558897"
+    },
+    {
+      "timestamp": "2025-05-26T13:46:57.000Z",
+      "tweetText": "I know, right?",
+      "isRepost": true,
+      "originalAuthor": "shurlogg2",
+      "postUrl": "/shurlogg2/status/1926998492926382297"
+    },
+    {
+      "timestamp": "2025-05-26T01:26:28.000Z",
+      "tweetText": "",
+      "isRepost": true,
+      "originalAuthor": "SolanaLegend",
+      "postUrl": "/SolanaLegend/status/1926812146194600321"
+    },
+    {
+      "timestamp": "2025-05-26T00:48:07.000Z",
+      "tweetText": "> \"they are great people, we always have fun vibing with them. our founders even wore each other's tshirts at a dinner table.\"\n\n\n\nBe hyper competitive at making your products better and help each other out as people.",
+      "isRepost": false,
+      "originalAuthor": "aeyakovenko",
+      "postUrl": "/aeyakovenko/status/1926802494509785398"
+    },
+    {
+      "timestamp": "2025-05-26T00:17:33.000Z",
+      "tweetText": "Ethereum has lost to Solana on events side imho.\n\nand no, this is not an engagement bait tweet.\n\ni was at \n@SolanaConf\n last week in nyc, and i was very impressed by solana community.\n\nhere are somethings that i noticed:\n\n1. everyone in the eco is very very supportive. I took a",
+      "isRepost": true,
+      "originalAuthor": "naruto11eth",
+      "postUrl": "/naruto11eth/status/1926794801157923286"
+    },
+    {
+      "timestamp": "2025-05-25T23:47:01.000Z",
+      "tweetText": "My first \n@UWaterloo\n co-op changed my life",
+      "isRepost": true,
+      "originalAuthor": "0xSolanaGirl",
+      "postUrl": "/0xSolanaGirl/status/1926787118216450077"
+    },
+    {
+      "timestamp": "2025-05-25T23:34:16.000Z",
+      "tweetText": "THE SECRET INGREDIENT IS INSANE  FOUNDERS",
+      "isRepost": true,
+      "originalAuthor": "chainyoda",
+      "postUrl": "/chainyoda/status/1926783909968167033"
+    },
+    {
+      "timestamp": "2025-05-25T18:59:44.000Z",
+      "tweetText": "My favorite Sunday activity is watching YouTube star Mr. Beast while munching on a tasty Feastables Milk Crunch™ bar",
+      "isRepost": true,
+      "originalAuthor": "nikitabier",
+      "postUrl": "/nikitabier/status/1926714820151169161"
+    },
+    {
+      "timestamp": "2025-05-25T05:47:53.000Z",
+      "tweetText": "The gym bros were right",
+      "isRepost": true,
+      "originalAuthor": "garrytan",
+      "postUrl": "/garrytan/status/1926515545454551473"
+    }
+  ]
+}

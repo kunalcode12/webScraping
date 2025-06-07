@@ -1,0 +1,218 @@
+{
+  "account": "heliuslabs",
+  "scrapingDate": "2025-05-27T16:04:23.316Z",
+  "targetPostCount": 30,
+  "totalPosts": 30,
+  "posts": [
+    {
+      "timestamp": "2025-04-24T19:54:06.000Z",
+      "tweetText": "big news\n\nintroducing: institutional-grade staking and validator as a service for Solana\n\nearn top yield by having your own validator while we do the dirty work \n\nbest in class performance, reporting, and support — 0 headaches",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1915494477067649127"
+    },
+    {
+      "timestamp": "2025-05-26T22:09:04.000Z",
+      "tweetText": "Everything you need to know about Solana's biggest ever change\n\nWritten by two of the best in the business\n\nRead below (yes there is a TL;DR)",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1927124855561892155"
+    },
+    {
+      "timestamp": "2025-05-26T22:04:07.000Z",
+      "tweetText": "The sun is setting on Solana's consensus IBRL style: vote fees yeeted, latency deleted, haters depleted\n\n\n@__lostin__\n and I cover everything you need to know about Alpenglow, Solana's great consensus rewrite on the \n@heliuslabs\n blog:",
+      "isRepost": true,
+      "originalAuthor": "0xIchigo",
+      "postUrl": "/0xIchigo/status/1927125733777768757"
+    },
+    {
+      "timestamp": "2025-05-22T21:57:00.000Z",
+      "tweetText": "The leading global issuer of digital wallet passes is shipping on \n@solana\n with ZK Compression.\n\nAccelerate",
+      "isRepost": true,
+      "originalAuthor": "swen_sjn",
+      "postUrl": "/swen_sjn/status/1925672268056732090"
+    },
+    {
+      "timestamp": "2025-05-22T21:34:47.000Z",
+      "tweetText": "Dream it. Build it. Ship it.",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1925666675090669569"
+    },
+    {
+      "timestamp": "2025-05-22T21:35:44.000Z",
+      "tweetText": "↓ Register ↓",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1925666916875551053"
+    },
+    {
+      "timestamp": "2025-05-19T21:32:48.000Z",
+      "tweetText": "We're hosting a happy hour with the Privy team tomorrow in NYC\n\nCome stop by, get an orange hoodie, and potentially rub a bald head\n\nRSVP below",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1924579014783455257"
+    },
+    {
+      "timestamp": "2025-05-19T21:32:49.000Z",
+      "tweetText": "RSVP:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1924579018226974807"
+    },
+    {
+      "timestamp": "2025-05-19T18:56:31.000Z",
+      "tweetText": "Today we are introducing ZK Compression V2\n\nRent-free Solana tokens and accounts are becoming up to 70% more efficient.",
+      "isRepost": true,
+      "originalAuthor": "LightProtocol",
+      "postUrl": "/LightProtocol/status/1924539681942753298"
+    },
+    {
+      "timestamp": "2025-05-16T22:00:29.000Z",
+      "tweetText": "Announcing the [REDACTED] Hackathon Winners \n\nFor the entire month of April, Solana’s research, forensics, and security ecosystems competed for over $175,000 in prizes.\n\nIn total, 38 bounties attracted over 900 submissions!\n\nLet's meet the winners:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923498816566911042"
+    },
+    {
+      "timestamp": "2025-05-16T22:02:15.000Z",
+      "tweetText": "@Supapumpbot\n — Supa Sleuth Challenge ($500)\n\nGoal: create educational content or tools to report fake activity.\n\n 1st: https://medium.com/@joshuasunday300/the-wild-west-of-meme-tokens-a86fb96d50d4…\n 2nd: https://dev.fun/p/b3826f264420873b13ce…\n 3rd:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923499260974334275"
+    },
+    {
+      "timestamp": "2025-05-16T22:02:18.000Z",
+      "tweetText": "Congrats to all the winners and participants — your contributions are invaluable to the growth and safety of Solana.\n\nNote: Sponsors have until May 31st to disburse bounty payouts.\n\nQuestions? Reach out in the public Telegram channel.\n\nThis is the last post of this thread.",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923499273192341559"
+    },
+    {
+      "timestamp": "2025-05-16T22:01:43.000Z",
+      "tweetText": "@tokenmetricsinc\n — Crypto Analysis Report ($3,000)\n\nGoal: produce a crypto report using Token Metrics' APIs and data.\n\n 1st: https://x.com/anarcaze/status/1916049447538315653…\n 2nd: https://x.com/Hogwartsofweb3/status/1914388411974344711…\n 3rd:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923499126915989709"
+    },
+    {
+      "timestamp": "2025-05-16T22:01:46.000Z",
+      "tweetText": "@TheNebulaNode\n — Visualizing Solana Staking ($3,000)\n\nGoal: create a dashboard for Solana staking and performance data.\n\n 1st Place:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923499139289186511"
+    },
+    {
+      "timestamp": "2025-05-16T22:00:45.000Z",
+      "tweetText": "@solblaze_org\n — Liquid Staking and Validator Ecosystem Data ($10,000)\n\nGoal: provide insights into liquid staking, particularly bSOL.\n\nMeet the winners:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923498884539744508"
+    },
+    {
+      "timestamp": "2025-05-16T22:00:48.000Z",
+      "tweetText": "@Rugcheckxyz\n — Onchain Analysis ($7,000)\n\nGoal: use RugCheck APIs to build projects that protect Solana users.\n\n 1st: https://x.com/Dev_Syrem/status/1913577188957315120?s=19…\n 2nd: https://github.com/Ge0frey/chainprobe…\n 3rd: https://github.com/Josh0007-sunday/anlytics-defiportfolio…",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923498896585785748"
+    },
+    {
+      "timestamp": "2025-05-15T20:30:34.000Z",
+      "tweetText": "we heard some of you have commitment issues, so we made a guide\n\non solana, they shape ux, speed, security, and how reliable your tx is\n\nstart fixing it here",
+      "isRepost": true,
+      "originalAuthor": "guneysol",
+      "postUrl": "/guneysol/status/1923113799067869429"
+    },
+    {
+      "timestamp": "2025-05-15T21:13:26.000Z",
+      "tweetText": "Stablecoins are disrupting every corner of the payments industry.\n\nBanks, fintechs, and financial institutions are quickly taking notice.\n\nOur friends at \n@sphere_labs\n wrote an excellent guide to the global payments market, opportunities for stablecoin companies, and use cases.",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923124589174919449"
+    },
+    {
+      "timestamp": "2025-05-15T21:13:27.000Z",
+      "tweetText": "Read the full article:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1923124592991773180"
+    },
+    {
+      "timestamp": "2025-05-14T18:09:58.000Z",
+      "tweetText": "LIVE: watch our Co-founder \n@nick_pennie\n discuss MEV, staking, and validator incentives at Solana Snapshot",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1922716030868066673"
+    },
+    {
+      "timestamp": "2025-05-14T16:19:59.000Z",
+      "tweetText": "mev, sequencing, latency games, distributed systems, scaling, geo/routing optimizations, low-level rust, hypergrowth startups, L1 design\n\nif you're interested in these — I am hiring staff backend engineers for \n@heliuslabs\n\n\nyou will shape the future of Solana and hence all crypto",
+      "isRepost": true,
+      "originalAuthor": "0xMert_",
+      "postUrl": "/0xMert_/status/1922688350462366167"
+    },
+    {
+      "timestamp": "2025-05-09T15:30:04.000Z",
+      "tweetText": "Drift is proud to partner with \n@SolanaFndn\n, \n@MetaMask\n, \n@soon_svm\n,  \n@sanctumso\n and \n@heliuslabs\n to bring you DeFi Day in NYC \n\nHappy Hour @ DeFi Day is powered by our frens at \n@raikucom\n, \n@GSR_io\n, and \n@BlockdaemonHQ\n.\n\nBig thanks to all our partners for making this possible!",
+      "isRepost": true,
+      "originalAuthor": "DriftProtocol",
+      "postUrl": "/DriftProtocol/status/1920863850368479304"
+    },
+    {
+      "timestamp": "2025-05-09T17:26:05.000Z",
+      "tweetText": "Surfpool is accelerating Solana development.\n\nLearn how to locally test your programs against real mainnet state with Surfnets, and unlock cheatcodes for faster simulations.\n\nPlus, instantly fund any account with any token using their new faucet.\n\nGet the full breakdown",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1920893044804456790"
+    },
+    {
+      "timestamp": "2025-05-09T17:26:06.000Z",
+      "tweetText": "Read the article from \n@txtx_sol\n:",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1920893050152222799"
+    },
+    {
+      "timestamp": "2025-05-09T00:12:47.000Z",
+      "tweetText": "We just redesigned all of our API and Solana docs\n\n- All RPC and API methods are now interactive and can be tested directly on the docs\n\n- High level guides on sending transactions, streaming data, or working with dedicated nodes\n\n- built-in AI assistant to search everything",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1920633009436246024"
+    },
+    {
+      "timestamp": "2025-05-09T00:12:48.000Z",
+      "tweetText": "play around @",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1920633012489773454"
+    },
+    {
+      "timestamp": "2025-05-08T23:13:10.000Z",
+      "tweetText": "Solana is taking on the NASDAQ to become the internet's market\n\nthis is difficult — but necessary for the future of the internet, markets, and ultimately capitalism\n\nour job at \n@heliuslabs\n is to accelerate this vision — I am hiring:\n\n- sr/staff backend engineers (rust)\n- BD\n-",
+      "isRepost": true,
+      "originalAuthor": "0xMert_",
+      "postUrl": "/0xMert_/status/1920618005978833072"
+    },
+    {
+      "timestamp": "2025-05-07T20:56:04.000Z",
+      "tweetText": "Solana devs, this one's for you.  \n\nSign up NOW for Builder Nights \n@Solana\n Edition to join a fireside chat with \n@0xMert_\n & \n@francescoswiss\n! \n\n Register below \n Brooklyn, NY\n May 21",
+      "isRepost": true,
+      "originalAuthor": "MetaMask",
+      "postUrl": "/MetaMask/status/1920221116695810215"
+    },
+    {
+      "timestamp": "2025-05-07T19:12:03.000Z",
+      "tweetText": "Top 5,000 Helius stakers:\n\nYou might be eligible to claim $DOOD\n\nFollow \n@Doodles\n & turn on notifs for more info",
+      "isRepost": false,
+      "originalAuthor": "heliuslabs",
+      "postUrl": "/heliuslabs/status/1920194940237459577"
+    },
+    {
+      "timestamp": "2025-05-05T17:35:35.000Z",
+      "tweetText": "big news\n\nSolana blocks are getting 20% bigger\n\nmeaning more TPS, very soon\n\nthat + a ton of other improvements to the network are coming with Agave 2.2 — we wrote about it all in an easy to digest way below, for free:\n\nread: https://helius.dev/blog/agave-v22-update--all-you-need-to-know…",
+      "isRepost": true,
+      "originalAuthor": "0xMert_",
+      "postUrl": "/0xMert_/status/1919445884854567143"
+    }
+  ]
+}

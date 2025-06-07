@@ -1,0 +1,218 @@
+{
+  "account": "marginfi",
+  "scrapingDate": "2025-05-27T16:24:13.900Z",
+  "targetPostCount": 30,
+  "totalPosts": 30,
+  "posts": [
+    {
+      "timestamp": "2025-01-30T15:38:55.000Z",
+      "tweetText": "1/ Introducing Staked Collateral \n\nA Solana first: Use your native stake as collateral without unstaking or using LSTs. \n\nKeep your superior staking rewards while accessing immediate liquidity — only on http://app.marginfi.com",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1884989680598368714"
+    },
+    {
+      "timestamp": "2025-05-21T16:37:19.000Z",
+      "tweetText": "Join us tomorrow, Thursday @ 4:25 PM EST, as we discuss Institutional DeFi on Solana at Ship or Die",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1925229428373696720"
+    },
+    {
+      "timestamp": "2025-05-20T15:40:36.000Z",
+      "tweetText": "Today is a good day to Accelerate.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1924852769497690489"
+    },
+    {
+      "timestamp": "2025-05-19T13:55:26.000Z",
+      "tweetText": "Accelerate",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1924463913090818458"
+    },
+    {
+      "timestamp": "2025-05-14T21:38:57.000Z",
+      "tweetText": "1/ The mrgn4 validator is currently offering ~8.65% APY on staked $SOL, making it one of the highest yields on Solana.\n\nBut what if you could loop your native stake and push that APY over 28%? \n\nLet's learn how ↓",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1922768622209933568"
+    },
+    {
+      "timestamp": "2025-05-14T21:38:59.000Z",
+      "tweetText": "4/ By looping your natively staked $SOL at a 90% LTV, you're able to achieve an effective yield of ~28.45% APY.\n\nYield breakdown (if fully looped starting from 100 $SOL):\n\n→ 1,000 $SOL earning 8.65% = +86.5 SOL per year\n→ 900 $SOL borrowed at 6.45% = –58.05 $SOL per year\n→ Net",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1922768630304899353"
+    },
+    {
+      "timestamp": "2025-05-14T21:38:59.000Z",
+      "tweetText": "5/ This strategy unlocks capital efficiency for your natively staked $SOL, without giving up staking rewards or MEV yield.\n\nLoop responsibly :)",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1922768632095940907"
+    },
+    {
+      "timestamp": "2025-05-12T19:50:32.000Z",
+      "tweetText": "Join us at \n@SolanaConf\n and watch \n@macbrennan_cc\n participate in a panel discussion on institutional adoption of DeFi. Accelerate",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1922016562095047019"
+    },
+    {
+      "timestamp": "2025-05-09T14:45:00.000Z",
+      "tweetText": "We're at crypto's dot-com moment, with the US leading the charge — join marginfi at Accelerate in NYC this May and learn how Solana is reshaping finance, tech, and the internet as we know it.\n\nTickets: https://lu.ma/accelerate2025?tk=HOTMjO&utm_source=marginfi…",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1920852509750395319"
+    },
+    {
+      "timestamp": "2025-05-08T21:01:02.000Z",
+      "tweetText": "1/ $USDC interest rates just got a major update on marginfi \n\n→ Protocol fixed fee dropped from 1% → ~0%\n→ Interest rate fee cut from 12.5% → ~6%\n\nAs a result, borrowing $USDC on marginfi is cheaper, and lending $USDC earns you more.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1920584750936568073"
+    },
+    {
+      "timestamp": "2025-05-08T21:01:05.000Z",
+      "tweetText": "2/ In just the past 24hrs, marginfi's $USDC market has become way more competitive:\n\n→ Borrow rates dropped 77 bps (8.41% → 7.64%) \n→ Lend rates increased 113 bps (3.05% → 4.18%) \n\nTap into better $USDC lending/borrowing today on",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1920584763787915436"
+    },
+    {
+      "timestamp": "2025-05-08T21:01:09.000Z",
+      "tweetText": "3/ Happy lending <3",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1920584780560937081"
+    },
+    {
+      "timestamp": "2025-05-07T14:12:34.000Z",
+      "tweetText": "Introducing SolanaUI Swap\n\na complete \n@JupiterExchange\n swap widget built with SolanaUI components and \n@shadcn\n ui",
+      "isRepost": true,
+      "originalAuthor": "chambaz",
+      "postUrl": "/chambaz/status/1920119572004319472"
+    },
+    {
+      "timestamp": "2025-05-06T16:05:08.000Z",
+      "tweetText": "When you use leverage without liquidation, you simply need to be able to sometimes stomach downturns and wait for better market conditions.\n\nYou don't need to time the market.",
+      "isRepost": true,
+      "originalAuthor": "haven_fi",
+      "postUrl": "/haven_fi/status/1919785511666712928"
+    },
+    {
+      "timestamp": "2025-05-06T20:43:22.000Z",
+      "tweetText": "marginfi is proud to help Ethereum-native teams like \n@rockodefi\n give their users exposure to the Solana ecosystem.\n\nPlug into marginfi’s robust yield infrastructure and deliver fast, low-cost, user experiences built for scale.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1919855529624527121"
+    },
+    {
+      "timestamp": "2025-05-04T21:37:08.000Z",
+      "tweetText": "Gave a talk on the future of MRGN at \n@SolanaCrossroad\n's in Istanbul!\n\nI expect the recording to be ready soon. Talked thru a lot of the things users have been asking about.\n\nYes, all the things :)\n\nThe future is bright at \n@marginfi",
+      "isRepost": true,
+      "originalAuthor": "macbrennan_cc",
+      "postUrl": "/macbrennan_cc/status/1919144287222042974"
+    },
+    {
+      "timestamp": "2025-04-30T16:03:21.000Z",
+      "tweetText": "Your 100 SOL could be earning you an extra $5,500.\n\nStop holding, use \n@haven_fi\n — Leverage without liquidation.\n\n[Full Guide]",
+      "isRepost": true,
+      "originalAuthor": "jussy_world",
+      "postUrl": "/jussy_world/status/1917610737092157849"
+    },
+    {
+      "timestamp": "2025-04-30T15:16:02.000Z",
+      "tweetText": "marginfi is excited to join \n@MetaMask\n for a Solana edition of Builder Nights alongside various ecosystem partners this Accelerate!  RSVP Below ↓\n\n May 21, 2025 \n 6pm EST\n\nStay tuned for marginfi's agenda at \n@SolanaConf\n!",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1917598829009899936"
+    },
+    {
+      "timestamp": "2025-04-30T15:16:22.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1917598911583203424"
+    },
+    {
+      "timestamp": "2025-04-25T17:13:21.000Z",
+      "tweetText": "there is no dip, i love you.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915816412121096613"
+    },
+    {
+      "timestamp": "2025-04-24T14:30:22.000Z",
+      "tweetText": "Community is the backbone of \n@solana\n — the marginfi team is proud to support and help grow it through moments like this",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915413008420864031"
+    },
+    {
+      "timestamp": "2025-04-24T14:19:04.000Z",
+      "tweetText": "gm",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915410165890769019"
+    },
+    {
+      "timestamp": "2025-04-23T23:05:28.000Z",
+      "tweetText": "1/ Your staked SOL on marginfi doesn't just sit there — it keeps earning staking + MEV rewards through the Replenish Cycle.\n\nHere’s how it works and how you can use it ↓",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915180250125992122"
+    },
+    {
+      "timestamp": "2025-04-23T23:05:29.000Z",
+      "tweetText": "4/ This cycle happens automatically once per epoch, but if you want to optimize early, you can also manually trigger the replenish from your Portfolio page (as shown in the first post).",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915180254987248022"
+    },
+    {
+      "timestamp": "2025-04-23T23:05:30.000Z",
+      "tweetText": "5/ TL;DR: your voucher grows in value over time. no action needed, but power users can replenish early to stay ahead.\n\nDo more with your natively staked SOL. On marginfi.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1915180257012830603"
+    },
+    {
+      "timestamp": "2025-04-22T21:06:04.000Z",
+      "tweetText": "view \n@marginfi\n activity\nquick access to txns\neasily re-run past actions",
+      "isRepost": true,
+      "originalAuthor": "chambaz",
+      "postUrl": "/chambaz/status/1914787814102982818"
+    },
+    {
+      "timestamp": "2025-04-22T21:01:29.000Z",
+      "tweetText": "1/ Introducing the Activity Tab — a new way to view your account history \n\nNo more digging through Solana explorers.\n\nUse the Activity Tab to review all your Deposit, Borrow, Repay, Withdraw and Flashloan transactions — right in the marginfi Wallet.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1914786660560331035"
+    },
+    {
+      "timestamp": "2025-04-22T21:01:33.000Z",
+      "tweetText": "3/ Each entry links to the transaction onchain.\n\nEven better: you can replay  transactions directly.\n\n→ Rebalance between $SOL and $USDC,\n→ Roll over your borrow positions,\n→ Routinely top-up your positions — all in one click.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1914786676993614079"
+    },
+    {
+      "timestamp": "2025-04-22T21:01:37.000Z",
+      "tweetText": "Start using the new Activity Tab feature today on marginfi.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1914786692663533900"
+    },
+    {
+      "timestamp": "2025-04-21T15:20:05.000Z",
+      "tweetText": "$USDG is now live on marginfi \n\nStart lending and borrowing against your $USDG today. Deposit and borrow caps will be raised with demand.",
+      "isRepost": false,
+      "originalAuthor": "marginfi",
+      "postUrl": "/marginfi/status/1914338354432258142"
+    }
+  ]
+}

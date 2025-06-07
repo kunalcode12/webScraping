@@ -1,0 +1,218 @@
+{
+  "account": "VitalikButerin",
+  "scrapingDate": "2025-05-27T15:33:20.988Z",
+  "targetPostCount": 30,
+  "totalPosts": 30,
+  "posts": [
+    {
+      "timestamp": "2025-05-25T12:28:05.000Z",
+      "tweetText": "Nordics are walking back the cashless society initiative because their centralized implementation of the concept is too fragile. Cash turns out necessary as a backup.\n\nEthereum needs to be resilient enough, and private enough, to be able to credibly play this kind of role.",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1926616257094091216"
+    },
+    {
+      "timestamp": "2025-05-23T05:29:37.000Z",
+      "tweetText": "",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925786172065763655"
+    },
+    {
+      "timestamp": "2025-05-21T18:04:50.000Z",
+      "tweetText": "A fun math aside, on the idea of splitting a large zk proving workload between multiple provers.\n\nSuppose you have N provers, and you have a proving workload that you split into N parts (so, one part per prover). You require provers to pre-register, but registration is",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925251453805027380"
+    },
+    {
+      "timestamp": "2025-05-21T17:10:29.000Z",
+      "tweetText": "The work of teams like MACI, also https://aztec.network/blog/nounsdao-private-voting-final-update…, https://blog.shutter.network/dao-voting-confidence-is-in-decline-how-to-restore-it/… and others, is important.\n\nAlong with privacy in finance and privacy in comms, we need privacy in governance.\n\n(In fact, we need the former two in part because finance and comms *are* governance)",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925237776938594458"
+    },
+    {
+      "timestamp": "2025-05-21T09:14:29.000Z",
+      "tweetText": "More generally, perhaps a core theme of the next wave of democracy will be less \"transparency and accountability\" and more deliberate indirection and room for (pluralistic, aggregated) individual conscience.\n\n(this applies to DAOs too; eg. see NounsDAO https://aztec.network/blog/nounsdao-private-voting-final-update…)",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925117986890752302"
+    },
+    {
+      "timestamp": "2025-05-21T09:14:28.000Z",
+      "tweetText": "IMO UN resolution votes should be secret ballot.\n\nEach country can choose (and replace) their own representative, but once the choice is made, what the representative does is up to their own conscience.\n\nLess \"pressuring\" by great powers, more seeing how people really think.",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925117983946309893"
+    },
+    {
+      "timestamp": "2025-05-21T04:44:57.000Z",
+      "tweetText": "1. This is average case, not worst case. We need real-time worst case for safe L1 use\n2. Not formally verified\n3. ~100 kW to prove. Proving is a 1-of-n trust model, but even still, perhaps we want proving doable at home (~10 kW)\n4. We wanna 10-100x the L1 gaslimit\n\nSo, truly",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1925050155922862526"
+    },
+    {
+      "timestamp": "2025-05-20T15:12:34.000Z",
+      "tweetText": "Real-Time Ethereum Proving is here.\n\nINTRODUCING: SP1 Hypercube",
+      "isRepost": true,
+      "originalAuthor": "SuccinctLabs",
+      "postUrl": "/SuccinctLabs/status/1924845712921264562"
+    },
+    {
+      "timestamp": "2025-05-19T12:20:39.000Z",
+      "tweetText": "The novel thing we are doing is in the peer to peer network, the novel thing is in the principles, the thing that build a trillion dollar asset class is the soul, the attempt to do new things better",
+      "isRepost": true,
+      "originalAuthor": "alpeh_v",
+      "postUrl": "/alpeh_v/status/1924440060755120517"
+    },
+    {
+      "timestamp": "2025-05-19T07:50:35.000Z",
+      "tweetText": "Ethereum will not abandon self sovereignty to take scaling shortcuts,  this is what sets it apart.",
+      "isRepost": true,
+      "originalAuthor": "lex_node",
+      "postUrl": "/lex_node/status/1924372096643158369"
+    },
+    {
+      "timestamp": "2025-05-19T06:05:46.000Z",
+      "tweetText": "以太坊跑不跑得起，已不是技術問題，而是階級問題？\n\n當以太坊持續尋找擴展主網效能的路時，有一個經常被忽略、但至關重要的問題浮上檯面：一般散戶還能自己跑節點嗎？\n\nVitalik 在 Ethereum Research 發表的新文，就聚焦在這點，「怎麼讓普通人，依然能跑得起節點？」",
+      "isRepost": true,
+      "originalAuthor": "BlockTempo",
+      "postUrl": "/BlockTempo/status/1924345716832661852"
+    },
+    {
+      "timestamp": "2025-05-19T04:51:29.000Z",
+      "tweetText": "How to make Ethereum L1 scaling more friendly to users running local nodes for personal use:",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1924327024044253547"
+    },
+    {
+      "timestamp": "2025-05-18T06:25:49.000Z",
+      "tweetText": "Welcome to the stage 1 gang \n@Starknet\n!",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1923988377474330775"
+    },
+    {
+      "timestamp": "2025-05-12T13:08:32.000Z",
+      "tweetText": "we've hosted 4 distilled human judgment challenges on \n@PondGNN\n ever since vitalik wrote \"AI as the engine, humans as the steering wheel\" back in Feb\n\nDavid has been a star participant in these contests so i read his writeup  with curiosity as the first empirical results on the",
+      "isRepost": true,
+      "originalAuthor": "TheDevanshMehta",
+      "postUrl": "/TheDevanshMehta/status/1921915396397093229"
+    },
+    {
+      "timestamp": "2025-05-07T18:08:18.000Z",
+      "tweetText": "How can Ethereum fund the infrastructure it relies on?\n\n→ Surfacing what matters\n• What principles, outcomes, or metrics should guide how funds are allocated?\n• What principles, outcomes, or metrics should guide how funds are allocated?\n• What does the ecosystem value?\n\n→ A",
+      "isRepost": true,
+      "originalAuthor": "OctantApp",
+      "postUrl": "/OctantApp/status/1920178894642294850"
+    },
+    {
+      "timestamp": "2025-05-08T12:15:08.000Z",
+      "tweetText": "just wrote up a monster post with \n@sejal_rekhan\n around how ethereums ecosystem can become self-sufficient & circular\n\nSome of these ideas have sat in my head for ages & grateful to Sejal for making the push to comprehensively write up an entire roadmap\n\nhere's a 5 point TL;DR\n\n1.",
+      "isRepost": true,
+      "originalAuthor": "TheDevanshMehta",
+      "postUrl": "/TheDevanshMehta/status/1920452403981394427"
+    },
+    {
+      "timestamp": "2025-05-08T15:12:55.000Z",
+      "tweetText": "EVM DevEx is one of \n@Ethereum\n's strongest moats.\n\n{solx} is a chance to bring it to the next level via:\n\n1) Faster language evolution\n2) Eliminating the need for inline assembly\n3) Solidity-to-RISC-V compilation\n4) World-class LLVM tooling (e.g. VS Code debuggers)",
+      "isRepost": true,
+      "originalAuthor": "gluk64",
+      "postUrl": "/gluk64/status/1920497146878480546"
+    },
+    {
+      "timestamp": "2025-05-07T10:20:48.000Z",
+      "tweetText": "Pectra is live on Ethereum mainnet!\n\n- Smart account wallet UX features now active\n- L2 scaling data storage blobs increased by 2x\n- Validator UX improvements live\n\nCommunity members will continue to monitor for any issues over the next 24 hours.",
+      "isRepost": true,
+      "originalAuthor": "ethereum",
+      "postUrl": "/ethereum/status/1920061243966054696"
+    },
+    {
+      "timestamp": "2025-05-07T10:00:03.000Z",
+      "tweetText": "upgrade in progress . . .\n\nactivating Pectra @ epoch 364032 // 10:05:11 UTC",
+      "isRepost": true,
+      "originalAuthor": "ethereum",
+      "postUrl": "/ethereum/status/1920056024129581306"
+    },
+    {
+      "timestamp": "2025-04-29T01:24:41.000Z",
+      "tweetText": "Twin goals of EF:\n\n1. Usage of Ethereum - but usage of a type where users are actually benefiting from Ethereum's underlying properties\n2. Resilience and decentralization of Ethereum - viewed holistically, focused on addressing points of weakness anywhere in the stack",
+      "isRepost": false,
+      "originalAuthor": "VitalikButerin",
+      "postUrl": "/VitalikButerin/status/1917027222398886364"
+    },
+    {
+      "timestamp": "2025-04-29T01:19:46.000Z",
+      "tweetText": "@VitalikButerin\n and I wrote this to share why the EF exists and what’s next—real-world usage & deeper resilience. With \n@hwwonx\n  & \n@tkstanczak\n co-leading EF’s next chapter, we're also counting on the community to reach those goals",
+      "isRepost": true,
+      "originalAuthor": "AyaMiyagotchi",
+      "postUrl": "/AyaMiyagotchi/status/1917025986602013002"
+    },
+    {
+      "timestamp": "2025-04-28T15:54:42.000Z",
+      "tweetText": "8/ Lastly, an update about the structure of the EF management team and board, and the functions of each.",
+      "isRepost": true,
+      "originalAuthor": "ethereumfndn",
+      "postUrl": "/ethereumfndn/status/1916883784189780268"
+    },
+    {
+      "timestamp": "2025-04-28T15:54:41.000Z",
+      "tweetText": "5/ Second, from our new Co-Executive Directors, \n@hwwonx\n and \n@tkstanczak\n, an update on their focus areas and plans for how to achieve the EF’s vision in the short and long term.",
+      "isRepost": true,
+      "originalAuthor": "ethereumfndn",
+      "postUrl": "/ethereumfndn/status/1916883778737254896"
+    },
+    {
+      "timestamp": "2025-04-28T15:54:40.000Z",
+      "tweetText": "2/ First, from \n@AyaMiyagotchi\n and \n@VitalikButerin\n: a restatement and update on the EF’s vision, principles and values for this new era.",
+      "isRepost": true,
+      "originalAuthor": "ethereumfndn",
+      "postUrl": "/ethereumfndn/status/1916883773649785113"
+    },
+    {
+      "timestamp": "2025-04-28T15:54:39.000Z",
+      "tweetText": "1/ Today, we’re excited to share three updates from the EF board and management team.",
+      "isRepost": true,
+      "originalAuthor": "ethereumfndn",
+      "postUrl": "/ethereumfndn/status/1916883771280040264"
+    },
+    {
+      "timestamp": "2025-04-28T06:26:39.000Z",
+      "tweetText": "Ethereum's execution layer scaling roadmap is on track:\n- Continuous Gas Limit Increases (EIP-7935)\n- History Expiry (EIP-4444)\n- Delayed Execution (EIP-7886) \n- Block Access Lists (EIP-7928)\n- Block-Level Warming (EIP-7863) \n\nHere's a short thread with additional context",
+      "isRepost": true,
+      "originalAuthor": "nero_eth",
+      "postUrl": "/nero_eth/status/1916740828376006820"
+    },
+    {
+      "timestamp": "2025-04-23T11:23:41.000Z",
+      "tweetText": "A new legal letter aimed at OpenAI lays out in stark terms the money and power grab OpenAI is trying to trick its board members into accepting — what one analyst calls \"the theft of the millennium.\"\n\nThe simple facts of the case are both devastating and darkly hilarious.\n\nI'll",
+      "isRepost": true,
+      "originalAuthor": "robertwiblin",
+      "postUrl": "/robertwiblin/status/1915003641741652391"
+    },
+    {
+      "timestamp": "2025-04-24T23:01:01.000Z",
+      "tweetText": "By the way, the recent \n@VitalikButerin\n proposal around replacing the EVM with RISC-V was based on results we found in this paper about the 800x provability overhead of EVM in SP1.\n\nSome numbers from the paper:",
+      "isRepost": true,
+      "originalAuthor": "pumatheuma",
+      "postUrl": "/pumatheuma/status/1915541516128600348"
+    },
+    {
+      "timestamp": "2025-04-23T13:40:00.000Z",
+      "tweetText": "REAL decentralization. With Gigagas.\n\nSurge testnet is live in Stage 2!\n\nA based rollup template showcasing trustless scaling true to \n@Ethereum\n principles.\n\n1 Ggas per second capacity via Nethermind Client, on a fully open-source stack you can use today.\n\nGet started now:\n- Add",
+      "isRepost": true,
+      "originalAuthor": "NethermindEth",
+      "postUrl": "/NethermindEth/status/1915037946430079184"
+    },
+    {
+      "timestamp": "2025-04-21T12:00:04.000Z",
+      "tweetText": "LIVE NOW - Ethereum’s Strategic Pivot: The Plan to Restore Dominance\n\n\n@ethereumfndn\n researchers \n@dankrad\n and \n@adietrichs\n join \n@TrustlessState\n and \n@MikeIppolito_\n to discuss \n@ethereum\n's identity crisis—and how it’s turning the ship around.\n\nThey break down Ethereum’s cultural and",
+      "isRepost": true,
+      "originalAuthor": "BanklessHQ",
+      "postUrl": "/BanklessHQ/status/1914288019353260107"
+    }
+  ]
+}

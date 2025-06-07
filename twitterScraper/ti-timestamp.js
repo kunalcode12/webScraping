@@ -5,17 +5,26 @@ const path = require("path");
 const COOKIES_PATH = path.join(__dirname, "twitter_cookies.json");
 
 /**
- * Twitter Data Scraper with Date Filtering
- * This script logs into Twitter and scrapes post data from specified accounts until a target date
+ * Twitter Data Scraper with Date Filtering - Separate Files Edition
+ * This script creates separate JSON files for each account with minimal post data
  */
 async function main() {
   try {
     // SET YOUR TARGET DATE HERE (YYYY-MM-DD format)
     // The scraper will get all posts from now until this date
-    const TARGET_DATE = "2024-01-01"; // Change this to your desired date
+    const TARGET_DATE = "2025-04-24"; // Change this to your desired date
 
     console.log(`Scraping posts until: ${TARGET_DATE}`);
     const targetDateTime = new Date(TARGET_DATE);
+
+    // Create output directory for account files
+    const outputDir = path.join(
+      __dirname,
+      `twitter_data_${TARGET_DATE.replace(/-/g, "_")}`
+    );
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir);
+    }
 
     // Launch browser with visible UI and reasonable window size
     const browser = await puppeteer.launch({
@@ -114,52 +123,51 @@ async function main() {
 
     // Array of accounts to scrape
     const accountsToScrape = [
-      // "realDonaldTrump",
+      "aeyakovenko",
+      "rajgokal",
+      "solana",
+      "jupiter",
+      "weremeow",
+      "cz_binance",
+      "brian_armstrong",
+      "VitalikButerin",
+      "pompbitcoin",
+      "superteam",
+      "mSOLana",
+      "orca_so",
+      "raydium_io",
+      "stepfinance_",
+      "saber_hq",
+      "helium",
+      "jito_sol",
+      "phantom",
+      "TheSolanaBoss",
+      "SolanaLegend",
+      "solendprotocol",
+      "DriftProtocol",
+      "marginfi",
+      "SolanaFndn",
+      "laine_sa_",
+      "SOLBigBrain",
+      "AnsemCrypto",
+      "garyvee",
+      "realDonaldTrump",
       "elonmusk",
-      // "aeyakovenko",
-      // "rajgokal",
-      // "solana",
-      // "jupiter",
-      // "weremeow",
-      // "cz_binance",
-      // "brian_armstrong",
-      // "VitalikButerin",
-      // "pompbitcoin",
-      // "superteam",
-      // "mSOLana",
-      // "orca_so",
-      // "raydium_io",
-      // "stepfinance_",
-      // "saber_hq",
-      // "helium",
-      // "jito_sol",
-      // "phantom",
-      // "TheSolanaBoss",
-      // "SolanaLegend",
-      // "solendprotocol",
-      // "DriftProtocol",
-      // "marginfi",
-      // "SolanaFndn",
-      // "laine_sa_",
-      // "SOLBigBrain",
-      // "AnsemCrypto",
-      // "garyvee",
     ];
 
-    const allPostsData = [];
+    const scrapingSummary = [];
 
     // Process each account
     for (let i = 0; i < accountsToScrape.length; i++) {
       await randomDelay();
       const account = accountsToScrape[i];
 
+      console.log(`\n=== Processing ${account} ===`);
       console.log(`Navigating to ${account}'s profile...`);
       await page.goto(`https://x.com/${account}`, {
         waitUntil: "networkidle2",
       });
 
-      // Get account details
-      const accountData = await extractAccountDetails(page);
       console.log(`Scraping posts for ${account} until ${TARGET_DATE}...`);
 
       // Create a set to track post URLs we've already seen
@@ -168,11 +176,16 @@ async function main() {
       let reachedTargetDate = false;
       let scrollCount = 0;
       let noNewPostsCount = 0;
-      const maxNoNewPosts = 5; // Stop if no new posts found for 5 consecutive scrolls
+      const maxNoNewPosts = 15; // Increased from 5 to 15
 
       while (!reachedTargetDate && noNewPostsCount < maxNoNewPosts) {
         await page.evaluate(() => window.scrollBy(0, window.innerHeight));
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        // Longer wait after each scroll for data to load properly
+        console.log(
+          `Waiting for content to load after scroll ${scrollCount + 1}...`
+        );
+        await new Promise((resolve) => setTimeout(resolve, 5000)); // Increased from 2000ms to 5000ms
         scrollCount++;
 
         // Extract new posts
@@ -222,14 +235,17 @@ async function main() {
           `Scroll ${scrollCount}: Found ${uniqueNewPosts.length} new posts (total: ${allAccountPosts.length})`
         );
 
-        if (scrollCount % 5 === 0 && scrollCount > 0) {
-          console.log("Taking a longer pause to ensure content loads...");
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+        if (scrollCount % 3 === 0 && scrollCount > 0) {
+          console.log(
+            "Taking an extra longer pause to ensure content loads..."
+          );
+          await new Promise((resolve) => setTimeout(resolve, 8000)); // Increased from 3000ms to 8000ms
         }
 
-        // Safety check to prevent infinite scrolling
-        if (scrollCount > 200) {
-          console.log("Reached maximum scroll limit (200 scrolls)");
+        // Safety check to prevent infinite scrolling - increased limit
+        if (scrollCount > 500) {
+          // Increased from 200 to 500
+          console.log("Reached maximum scroll limit (500 scrolls)");
           break;
         }
       }
@@ -245,40 +261,64 @@ async function main() {
         `Filtered ${allAccountPosts.length} posts to ${filteredPosts.length} posts (from ${TARGET_DATE} onwards)`
       );
 
-      // Add the account's data to our full collection
-      allPostsData.push({
+      // Create individual file for this account
+      const accountFileName = path.join(outputDir, `${account}.json`);
+      const accountData = {
         account: account,
-        accountDetails: accountData,
+        scrapingDate: new Date().toISOString(),
+        targetDate: TARGET_DATE,
+        totalPosts: filteredPosts.length,
         posts: filteredPosts,
-        scrapingInfo: {
-          targetDate: TARGET_DATE,
-          totalScrolls: scrollCount,
-          reachedTargetDate: reachedTargetDate,
-          totalPostsFound: allAccountPosts.length,
-          filteredPostsCount: filteredPosts.length,
-        },
+      };
+
+      fs.writeFileSync(accountFileName, JSON.stringify(accountData, null, 2));
+      console.log(`Saved ${filteredPosts.length} posts to ${accountFileName}`);
+
+      // Add to summary
+      scrapingSummary.push({
+        account: account,
+        postsCount: filteredPosts.length,
+        scrollsCount: scrollCount,
+        reachedTargetDate: reachedTargetDate,
+        fileName: `${account}.json`,
       });
 
       console.log(
-        `Completed scraping for ${account}. Posts from ${TARGET_DATE}: ${filteredPosts.length}`
+        `Completed scraping for ${account}. Posts saved: ${filteredPosts.length}`
       );
     }
 
-    // Save data to JSON file with date in filename
-    const outputFileName = `twitter_data_until_${TARGET_DATE.replace(
-      /-/g,
-      "_"
-    )}.json`;
-    fs.writeFileSync(outputFileName, JSON.stringify(allPostsData, null, 2));
-    console.log(`All data fetched successfully and saved to ${outputFileName}`);
+    // Save scraping summary
+    const summaryFileName = path.join(outputDir, "_scraping_summary.json");
+    fs.writeFileSync(
+      summaryFileName,
+      JSON.stringify(
+        {
+          scrapingDate: new Date().toISOString(),
+          targetDate: TARGET_DATE,
+          totalAccounts: accountsToScrape.length,
+          accounts: scrapingSummary,
+        },
+        null,
+        2
+      )
+    );
 
-    // Print summary
-    console.log("\n=== SCRAPING SUMMARY ===");
-    allPostsData.forEach((accountData) => {
-      console.log(
-        `${accountData.account}: ${accountData.posts.length} posts (${accountData.scrapingInfo.totalScrolls} scrolls)`
-      );
+    // Print final summary
+    console.log("\n=== SCRAPING COMPLETE ===");
+    console.log(`Output directory: ${outputDir}`);
+    console.log(`Target date: ${TARGET_DATE}`);
+    console.log("Files created:");
+    scrapingSummary.forEach((summary) => {
+      console.log(`- ${summary.fileName}: ${summary.postsCount} posts`);
     });
+    console.log(`- _scraping_summary.json: Overall summary`);
+
+    const totalPosts = scrapingSummary.reduce(
+      (sum, account) => sum + account.postsCount,
+      0
+    );
+    console.log(`\nTotal posts scraped: ${totalPosts}`);
 
     // Keep browser open for manual review (optional)
     // await browser.close();
@@ -288,35 +328,7 @@ async function main() {
 }
 
 /**
- * Extract account details
- */
-async function extractAccountDetails(page) {
-  try {
-    // Extract follower count, following count, etc.
-    const accountDetails = await page.evaluate(() => {
-      const headerElement = document.querySelector(
-        'div[data-testid="UserProfileHeader_Items"]'
-      );
-      const bioElement = document.querySelector(
-        'div[data-testid="UserDescription"]'
-      );
-
-      return {
-        bio: bioElement ? bioElement.textContent : "",
-        headerInfo: headerElement ? headerElement.textContent : "",
-        // You can add more specific account details as needed
-      };
-    });
-
-    return accountDetails;
-  } catch (error) {
-    console.error("Error extracting account details:", error);
-    return {};
-  }
-}
-
-/**
- * Extract data from all posts on the page
+ * Extract data from all posts on the page - Minimal version
  */
 async function extractPostsData(page, accountName) {
   try {
@@ -333,89 +345,49 @@ async function extractPostsData(page, accountName) {
           const timestamp = timeElement
             ? timeElement.getAttribute("datetime")
             : null;
-          const displayTime = timeElement ? timeElement.textContent : null;
 
-          // Extract post URL
+          // Extract post URL to determine original author
           const linkElement = article.querySelector('a[href*="/status/"]');
           const postUrl = linkElement ? linkElement.getAttribute("href") : null;
 
           // Extract the account name from post URL
-          let postAccountName = "";
+          let originalAuthor = "";
           let isRepost = false;
 
           if (postUrl) {
             // Extract account name from URL pattern: /accountname/status/id
             const urlMatch = postUrl.match(/^\/([^\/]+)\/status\/\d+/);
             if (urlMatch) {
-              postAccountName = urlMatch[1];
+              originalAuthor = urlMatch[1];
               // Check if this is a repost by comparing account names
               isRepost =
-                postAccountName.toLowerCase() !==
+                originalAuthor.toLowerCase() !==
                 currentAccountName.toLowerCase();
             }
           }
 
-          // Extract engagement stats
-          const statsDiv =
-            article.querySelector('div[aria-label*="replies"]') ||
-            article.querySelector('div[aria-label*="likes"]') ||
-            article.querySelector('div[role="group"]');
-
-          let statsText = statsDiv ? statsDiv.getAttribute("aria-label") : "";
-
-          // Parse stats
-          let replies = 0,
-            reposts = 0,
-            likes = 0,
-            bookmarks = 0,
-            views = 0;
-
-          if (statsText) {
-            // Extract numbers using regex
-            const repliesMatch = statsText.match(/(\d+,?\d*)\s+repl/);
-            const repostsMatch = statsText.match(/(\d+,?\d*)\s+repost/);
-            const likesMatch = statsText.match(/(\d+,?\d*)\s+like/);
-            const bookmarksMatch = statsText.match(/(\d+,?\d*)\s+bookmark/);
-            const viewsMatch = statsText.match(/(\d+,?\d*)\s+view/);
-
-            replies = repliesMatch ? repliesMatch[1].replace(",", "") : 0;
-            reposts = repostsMatch ? repostsMatch[1].replace(",", "") : 0;
-            likes = likesMatch ? likesMatch[1].replace(",", "") : 0;
-            bookmarks = bookmarksMatch ? bookmarksMatch[1].replace(",", "") : 0;
-            views = viewsMatch ? viewsMatch[1].replace(",", "") : 0;
+          // If it's not a repost, the original author is the current account
+          if (!isRepost) {
+            originalAuthor = currentAccountName;
           }
 
           // Extract post content
           const tweetTextElement = article.querySelector(
             'div[data-testid="tweetText"]'
           );
-          let tweetText = tweetTextElement
+          const tweetText = tweetTextElement
             ? tweetTextElement.innerText.trim()
             : "";
 
-          // If it's a repost, modify the tweet text to show attribution
-          let tweetTextBy = "";
-          if (isRepost && tweetText && postAccountName) {
-            tweetTextBy = `${tweetText} - by @${postAccountName}`;
+          // Only add posts that have content or timestamp
+          if (tweetText || timestamp) {
+            posts.push({
+              timestamp,
+              tweetText,
+              isRepost,
+              originalAuthor,
+            });
           }
-
-          posts.push({
-            timestamp,
-            displayTime,
-            postUrl,
-            tweetText,
-            tweetTextBy,
-            originalAuthor: postAccountName,
-            isRepost,
-            engagement: {
-              replies: parseInt(replies) || 0,
-              reposts: parseInt(reposts) || 0,
-              likes: parseInt(likes) || 0,
-              bookmarks: parseInt(bookmarks) || 0,
-              views: parseInt(views) || 0,
-            },
-            rawStatsText: statsText,
-          });
         } catch (err) {
           console.log("Error processing individual post:", err);
         }
@@ -424,11 +396,7 @@ async function extractPostsData(page, accountName) {
       return posts;
     }, accountName); // Pass accountName as parameter to page.evaluate
 
-    // Add the account name to each post
-    return postsData.map((post) => {
-      post.accountName = accountName;
-      return post;
-    });
+    return postsData;
   } catch (error) {
     console.error("Error extracting posts data:", error);
     return [];
